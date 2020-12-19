@@ -2916,7 +2916,7 @@
 						color: #FFF;
 						font-weight: bold;
 					}
-			
+
  .active {
 	font-weight: bold;
 	 text-decoration: underline;
@@ -2931,7 +2931,7 @@
 	height: 60px;
 	width: auto;
 	margin: 0.6rem;
-	
+
 }
 
 		@media screen and (max-width: 980px) {
