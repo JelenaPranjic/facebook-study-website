@@ -1649,12 +1649,12 @@
 		}
 
 	a {
-		text-decoration: underline;
-		color: #f32853;
+	text-decoration: none;
+		color: ##30854C;
 	}
 
 		a:hover {
-			text-decoration: none;
+				text-decoration: underline;
 		}
 
 	strong, b {
@@ -2357,7 +2357,8 @@
 				background-color: #fff;
 				box-shadow: 0px 0.0375em 0.125em 0px rgba(0, 0, 0, 0.15);
 				display: block;
-				padding: 2em 1em;
+				padding: 1em 0.5em;
+				text-align: center;
 			}
 
 			@media screen and (max-width: 736px) {
@@ -2591,7 +2592,7 @@
 	}
 
 	header.major {
-		margin: 0 0 6em 0;
+		margin: 0 0 1em 0;
 	}
 
 		header.major h2 {
