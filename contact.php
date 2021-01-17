@@ -1,3 +1,19 @@
+<?php
+if($_POST["submit"]) {
+    $recipient="ad.study.contact@gmail.com";
+    $subject="Form to email message";
+    $sender=$_POST["sender"];
+    $senderEmail=$_POST["senderEmail"];
+    $message=$_POST["message"];
+
+    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
+
+    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
+
+    $thankYou="<p>Thank you! Your message has been sent.</p>";
+}
+
+?>
 <!DOCTYPE HTML>
 <!--
 	Spatial by TEMPLATED
@@ -10,12 +26,6 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<script language=”JavaScript”>
-				var frmvalidator = new Validator(“contactform”);
-				frmvalidator.addValidation(“name”,”req”,”Please provide your name”);
-				frmvalidator.addValidation(“email”,”req”,”Please provide your email”);
-				frmvalidator.addValidation(“email”,”email”, “Please enter a valid email address”);
-		</script>
 	</head>
 	<body>
 
@@ -57,14 +67,15 @@
 					<!-- Form -->
 						<section>
 							<h3>Contact Form</h3>
-							<form method=”post” name=”contact_form” action=”contact-form-handler.php”>
+							<?=$thankYou ?>
+							<form method=”post” name=”contact_form” action=”contact.php”>
 							<!--<form method="post" action="malito:ad.study.contact@gmail.com" enctype=”multipart/form-data” name=”EmailTestForm”> -->
 								<div class="row uniform 50%">
 									<div class="6u 12u$(xsmall)">
-										<input type="text" name="name" id="name" value="" placeholder="Name" />
+										<input type="text" name="sender" id="name" value="" placeholder="Name" />
 									</div>
 									<div class="6u$ 12u$(xsmall)">
-										<input type="email" name="email" id="email" value="" placeholder="Email" />
+										<input type="email" name="senderEmail" id="email" value="" placeholder="Email" />
 									</div>
 									<div class="12u$">
 									</div>
@@ -73,7 +84,7 @@
 									</div>
 									<div class="12u$">
 										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="special" /></li>
+											<li><input type="submit" name="submit" value="Send Message" class="special" /></li>
 										</ul>
 									</div>
 								</div>
