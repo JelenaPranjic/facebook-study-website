@@ -508,11 +508,13 @@
 		}
 
 		.row.\31 50\25 > * {
-			padding: 0 0 0 3em;
+			padding: 0 0 0 1em;
 		}
 
 		.row.\31 50\25 {
-			margin: 0 0 -1px -3em;
+			margin: 0 0 -1px -1em;
+
+
 		}
 
 		.row.uniform.\31 50\25 > * {
@@ -2344,12 +2346,12 @@
 
 		.image.captioned {
 			border-radius: 0;
-			margin-bottom: 4em;
+			/*margin-bottom: 4em;*/
 		}
 
 			.image.captioned img {
     border-radius: 0;
-    margin-top: 89px;
+    margin-top: 30px;
     color: #666666;
 			}
 
@@ -2357,8 +2359,9 @@
 				background-color: #fff;
 				box-shadow: 0px 0.0375em 0.125em 0px rgba(0, 0, 0, 0.15);
 				display: block;
-				padding: 1em 0.5em;
+				padding: 1em 1em;
 				text-align: center;
+
 			}
 
 			@media screen and (max-width: 736px) {
